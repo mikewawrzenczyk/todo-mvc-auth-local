@@ -1,7 +1,7 @@
 {
-  "name": "todo-mvc-auth-local",
+  "name": "Fysical Weight Tracking App",
   "version": "1.0.0",
-  "description": "",
+  "description": "Simple Weight Tracking App",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js",

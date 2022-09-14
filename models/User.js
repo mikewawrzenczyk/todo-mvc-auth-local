@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt')
 const mongoose = require('mongoose')
-
+//Schema used as sort of a cosntructor for the object so that we setup how out database is structred
 const UserSchema = new mongoose.Schema({
   userName: { type: String, unique: true },
   email: { type: String, unique: true },
@@ -9,7 +9,8 @@ const UserSchema = new mongoose.Schema({
 
 
 // Password hash middleware.
- 
+ //we encrypt the password by hashing or salting it
+ //hashes cannot be reversed
  UserSchema.pre('save', function save(next) {
   const user = this
   if (!user.isModified('password')) { return next() }
